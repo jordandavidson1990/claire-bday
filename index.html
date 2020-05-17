@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
     <title>Happy Birthday!</title>
     <link rel="icon" href="images/champagne.png" />
 
@@ -92,6 +94,20 @@
       .panel.open {
         font-size: 40px;
         flex: 8;
+      }
+      @media only screen and (max-width: 900px) {
+        .panels {
+          display: block;
+        }
+        .panel {
+          height: 15vh;
+        }
+        .panel > *:first-child {
+          display: none;
+        }
+        .panel > *:last-child {
+          display: none;
+        }
       }
     </style>
     <div class="panels"></div>
