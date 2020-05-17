@@ -97,10 +97,12 @@
       }
       @media only screen and (max-width: 900px) {
         .panels {
-          display: block;
+          display: flex;
+          flex-flow: column;
         }
         .panel {
           height: 15vh;
+          width: 100%;
         }
         .panel > *:first-child {
           display: none;
@@ -117,16 +119,16 @@
     <script>
       const root = document.querySelector(".panels");
 
-      const topLine = ["", "Be", "Happy", "Here's", "Claire", "It's", ""];
-      const messages = ["", "Happy", "Birthday", "To", "You", "Claire", ""];
+      const topLine = [" ", "Be", "Happy", "Here's", "Claire", "It's", " "];
+      const messages = ["A", "Happy", "Birthday", "To", "You", "Claire", ""];
       const bottomLine = [
-        "",
+        " ",
         "Claire",
         "Pal",
         "You",
         "Rock",
         "Carden McGinlay",
-        "",
+        " ",
       ];
 
       for (let index = 0; index < 7; index++) {
